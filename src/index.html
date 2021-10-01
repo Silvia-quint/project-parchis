@@ -4,16 +4,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.scss">
   <script type="module" src="./index.js"></script>
+  <title>Parchis</title>
 </head>
 <body>
-  <h1>Get 6 to Win!</h1>
-  <div class="container">
-    <div class="dice-face"></div>
-    <button class="button">Roll Dice Here</button>
-  </div>
+  <h1>Get 5 to Start!</h1>
+
+  <section class="parchis">
+
+    <div class="players red-green">
+
+      <div class="red">
+        <h2 class="player-name">Red Player</h2>
+        <div class="turns">
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+        </div>
+        <button class="button">Roll</button>
+      </div>
+
+      <div class="green">
+        <h2 class="player-name">Green Player</h2>
+        <div class="turns">
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+        </div>
+        <button class="button">Roll</button>
+      </div>
+    </div>
+
+    <div class="board">
+      <div class="dice-face"></div>
+    </div>
+
+    <div class="players blue-yellow">
+
+      <div class="blue">
+        <h2 class="player-name">Blue Player</h2>
+        <div class="turns">
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+        </div>
+        <button class="button">Roll</button>
+      </div>
+
+      <div class="yellow">
+        <h2 class="player-name">Yellow Player</h2>
+        <div class="turns">
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+          <div class="sheet"></div>
+        </div>
+        <button class="button">Roll</button>
+      </div>
+    </div>
+  </section>
+  
   
   <!--⚀ ⚁ ⚂ ⚃ ⚄ ⚅-->
 </body>

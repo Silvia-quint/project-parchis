@@ -1,29 +1,134 @@
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
+$bg-R: rgb(255, 0, 0);
+$sw-R: 1px 1px 10px darken($bg-R, 30%);
+$bg-G: rgb(30, 201, 15);
+$sw-G: 1px 1px 10px darken($bg-G, 30%);
+$bg-B: rgb(31, 196, 241);
+$sw-B: 1px 1px 10px darken($bg-B, 30%);
+$bg-Y: rgb(226, 223, 21);
+$sw-Y: 1px 1px 10px darken($bg-Y, 30%);
+$border: 1px solid black;
+
+@mixin fonts {
+  font-family: arial, helvetica, sans-serif;
   text-align: center;
 }
 
-.container {
-  width: 250px;
-  height: 250px;
-  margin: auto;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
+body {
+  margin: 0;
+  background: #d5fbff;
+}
+
+h1 {
+  font-family: $fonts;
+  text-align: center;
+  color: #04474e;
+}
+
+.parchis {
+  width: 100%;
+  height: 85vh;
+  border: $border;
+  display: inline-flex;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: row;
 
-.dice-face {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 20px;
-  margin: auto;
-}
+  & .players {
+    width: 350px;
+    margin: auto;
 
-.button {
-  width: 100px;
-  height: 30px;
-  margin: auto;
+    & .red,
+    .green,
+    .blue,
+    .yellow,
+    .turns {
+      width: 95%;
+      height: 50%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    & .player-name {
+      font-family: $fonts;
+      color: black;
+      font-size: 2em;
+      text-align: center;
+      margin: 10px auto;
+    }
+
+    & .turns {
+      border: $border;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    & .sheet {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 100%;
+    }
+
+    & .button {
+      width: 80px;
+      height: 45px;
+      margin: auto;
+      border-radius: 80%;
+      font-family: $fonts;
+    }
+  }
+
+  & .players.red-green {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.6) 40%, rgba(29, 215, 12, 0.6) 60%);
+
+    & .red .sheet {
+      background: $bg-R;
+      box-shadow: $sw-R;
+    }
+
+    & .green .sheet {
+      background: $bg-G;
+      box-shadow: $sw-G;
+    }
+  }
+
+  & .players.blue-yellow {
+    background: linear-gradient(180deg, rgba(23, 192, 236, 0.6) 40%, rgba(244, 241, 39, 0.6) 60%);
+
+    & .blue .sheet {
+      background: $bg-B;
+      box-shadow: $sw-B;
+    }
+
+    & .yellow .sheet {
+      background: $bg-Y;
+      box-shadow: $sw-Y;
+    }
+  }
+
+  & .board {
+    width: 620px;
+    height: 620px;
+    background-image: url(../public/bg-parchis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .dice-face {
+      width: 80px;
+      height: 80px;
+      border: $border;
+      border-radius: 20px;
+      margin: auto;
+    }
+  }
 }
