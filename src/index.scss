@@ -9,10 +9,10 @@ $sw-Y: 1px 1px 10px darken($bg-Y, 30%);
 $fonts: arial, helvetica, sans-serif;
 $border: 1px solid black;
 
-/* @mixin fonts {
+@mixin fonts {
   font-family: arial, helvetica, sans-serif;
   text-align: center;
-} */
+}
 
 body {
   margin: 0;

@@ -23,6 +23,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "stylelint-scss": "^3.21.0"
   }
 }
